@@ -3,7 +3,8 @@
 # NetSurf Source makefile for libraries and browser
 #
 # The TARGET variable changes what toolkit is built for valid values are:
-#  gtk (default if unset)
+#  gtk2 (default if unset)
+#  gtk3
 #  riscos
 #  framebuffer
 #  amiga
@@ -38,7 +39,7 @@ NSLIB_RO_TARG := librufl libpencil
 
 
 # Build Environment
-export TARGET ?= gtk
+export TARGET ?= gtk2
 TMP_PREFIX := $(CURDIR)/inst-$(TARGET)
 export PKG_CONFIG_PATH := $(TMP_PREFIX)/lib/pkgconfig:$(PKG_CONFIG_PATH)
 export PATH := $(PATH):$(TMP_PREFIX)/bin/
