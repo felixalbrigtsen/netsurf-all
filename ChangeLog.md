@@ -7,6 +7,11 @@ NetSurf 3.10
 
 ### Core / All platforms
 
+* Improved handling of NetSurf generated queries and errors, including:
+  - Timeouts.
+  - Authentication requests.
+  - Certificate problems.
+* Created consistent visual style for NetSurf Core generated content.
 * HTML layout fix for {min|max}-width on replaced elements.
 * Improved keyboard navigation.
 * Improved local history with keyboard navigation and improved display.
@@ -25,15 +30,10 @@ NetSurf 3.10
 * Improved handling of aborted fetches.
 * Improved integration testing with framework built around monkey front end.
 * Improvements to monkey front end to make testing more extensive and reliable.
-* Improved handling of NetSurf generated queries and errors, including:
-  - Timeouts.
-  - Authentication requests.
-  - Certificate problems.
 * Minor HTML form improvements.
 * Minor HTML handler optimisations.
 * Fixes to HTML handler for robustness.
 * Refactoring generation of about: pages.
-* Created consistent visual style for NetSurf Core generated content.
 * Fixed save complete not to save multiple copies of the same files.
 * Change how animated GIFs are rate-limited to be in line with other browsers.
 * Added a page info core window.
@@ -49,7 +49,7 @@ NetSurf 3.10
   - Fixed a problem in the parsing of invalid media blocks.
   - Minor code quality improvements.
 
-* LibDOM library 0.5.0 (Document Object Model):
+* LibDOM library 0.4.1 (Document Object Model):
   - Improved HTML TextArea element handling.
   - Fix SubtreeModified event to be fired after updating attribute values.
   - Support finalising the namespace strings.
@@ -64,51 +64,51 @@ NetSurf 3.10
 * LibNSBMP library 0.1.6 (BMP support):
   - Minor code quality improvements.
 
-* LibNSLog library 0.1.2 (Filterable logging):
+* LibNSLog library 0.1.3 (Filterable logging):
   - Added support for short log level names.
 
-* LibWapcaplet library 0.5.0 (String internment):
+* LibWapcaplet library 0.4.3 (String internment):
   - Free global context if no strings leak.
   - Enabled build with toolchains that don't support statement expressions.
 
 ### RISC OS-specific
 
+* Added Page Info url bar icon and window.
 * Updated to improved core content scaling interface.
 * Add support for scrolling core windows in response to core requests.
 * Removed login window because it's now handled by the core.
-* Added Page Info url bar icon and window.
 * Fixed use after free in dialog handling.
 * Fixed cookie window re-opening bug.
 
 ### GTK-specific
 
+* Huge reworking of the browser interface to be more modern.
+  - Particularly toolbar and menu code.
+* Default buildsystem target changed from gtk2 to gtk3.
+* Added Page Info icon.
 * Use Curl's default path for the ca-bundle.
 * Updated to improved core content scaling interface.
 * Run scheduler before fetching file descriptor set.
 * Add support for scrolling core windows in response to core requests.
 * Removed login window because it's now handled by the core.
 * Moved favicon from URL entry widget to tab.
-* Huge reworking of the browser interface to be more modern.
-  - Particularly toolbar and menu code.
 * Improved cursor focus handling.
-* Default buildsystem target changed from gtk2 to gtk3.
-* Added Page Info icon.
 
 ### AmigaOS-specific
 
+* Added Page Info icon and window.
 * Updated to improved core content scaling interface.
 * Add support for scrolling core windows in response to core requests.
 * Allow running JavaScript from ARexx.
 * Removed login window because it's now handled by the core.
-* Added Page Info icon and window.
 
 ### Windows-specific
 
+* Added Page Info icon.
+* Improved Unicode handling.
 * Add support for scrolling core windows in response to core requests.
 * Removed login window because it's now handled by the core.
-* Improved Unicode handling.
 * Improved command line handling.
-* Added Page Info icon.
 * Improved error reporting.
 
 ### Haiku-specific
@@ -126,7 +126,7 @@ NetSurf 3.10
 * Added some glyphs to the internal font.
 * Can now enumerate available backend surfaces.
 
-* LibNSFB library 0.1.5 (NetSurf Framebuffer):
+* LibNSFB library 0.2.2 (NetSurf Framebuffer):
   - Optimisation to pixel/colour conversion.
   - Added backend surface enumerator.
   - Minor code quality improvements.
