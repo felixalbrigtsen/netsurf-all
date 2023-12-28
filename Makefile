@@ -18,7 +18,7 @@
 
 # Component settings
 COMPONENT := netsurf-all
-COMPONENT_VERSION := 3.10
+COMPONENT_VERSION := 3.11
 
 # Targets
 
