@@ -1,0 +1,23 @@
+# Snyk (https://snyk.io) policy file
+exclude:
+ global:
+   - buildsystem/**
+   - inst-gtk2/share/netsurf-buildsystem/**
+   - libnsbmp/**
+   - libnsfb/**
+   - libnslog/**
+   - libnspsl/**
+   - libnsutils/**
+   - libparserutils/**
+   - libpencil/**
+   - librosprite/**
+   - librufl/**
+   - libutf8proc/**
+   - libwapcaplet/**
+   - netsurf-nix/**
+   - nsgenbind/**
+   - Makefile
+   - env.sh
+   - flake.lock
+   - flake.nix
+   - flawfinder_out
