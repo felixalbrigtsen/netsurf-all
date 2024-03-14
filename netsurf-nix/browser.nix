@@ -93,6 +93,9 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (uilib == "gtk3") gtk3
   ;
 
+  dontStrip = true;
+  enableDebugging = true;
+
   # Since at least 2018 AD, GCC and other compilers run in `-fno-common` mode as
   # default, in order to comply with C standards and also get rid of some bad
   # quality code. Because of this, many codebases that weren't updated need to
