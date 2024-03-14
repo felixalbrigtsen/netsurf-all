@@ -21,3 +21,8 @@ exclude:
    - flake.lock
    - flake.nix
    - flawfinder_out
+   - netsurf/frontends/amiga/**
+   - netsurf/frontends/atari/**
+   - netsurf/frontends/riscos/**
+   - netsurf/frontends/beos/**
+   - netsurf/frontends/monkey/**
